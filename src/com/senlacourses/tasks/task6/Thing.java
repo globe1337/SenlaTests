@@ -2,9 +2,9 @@ package com.senlacourses.tasks.task6;
 
 public class Thing {
 
-    private int weight;
-    private int cost;
-    private float ratio;
+    private final int weight;
+    private final int cost;
+    private final float ratio;
 
     public Thing(int weight, int cost) {
         this.weight = weight;

@@ -1,7 +1,6 @@
 package com.senlacourses.tasks.resources;
 
 public class NaturalNumbersCheck {
-
     public void checkIsItANaturalNumber(int num) {
         boolean isComposite = false;
 

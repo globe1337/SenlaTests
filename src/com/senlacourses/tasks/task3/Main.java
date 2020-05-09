@@ -1,19 +1,20 @@
 package com.senlacourses.tasks.task3;
 
+import com.senlacourses.tasks.resources.Reader;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Scanner;
+
 
 public class Main {
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws IOException {
+        Reader reader = new Reader();
         System.out.println("Введите предложение :");
-        Scanner sc = new Scanner(System.in);
-        String line = sc.nextLine();
+        String line = reader.readString();
 
         int count = 0;
         ArrayList<String> words = new ArrayList<>();
-
         String clearSigns = line.replaceAll("\\p{Punct}", " ");
 
         for (String word : clearSigns.split(" ")) {

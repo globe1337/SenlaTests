@@ -1,22 +1,22 @@
 package com.senlacourses.tasks.task6;
 
+import com.senlacourses.tasks.resources.Reader;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         List<Thing> things = new ArrayList<>();
-        Scanner sc = new Scanner(System.in);
+        Reader reader = new Reader();
         Random random = new Random();
 
         System.out.println("Введите количество вещей");
-        int numberThings = sc.nextInt();
+        int numberThings = reader.readInt();
 
         System.out.println("Введите грузоподъемность рюкзака");
-        BackPack backpack = new BackPack(sc.nextInt());
+        BackPack backpack = new BackPack(reader.readInt());
 
         for (int i = 0; i < numberThings; i++) {
             Thing thing = new Thing(random.nextInt(15) + 1, random.nextInt(20) + 1);
